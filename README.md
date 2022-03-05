@@ -11,6 +11,8 @@ time ssdbenchmark w test.bin 1024 20
 
 Then to measure the time to read it:
 
-time ssdbenchmark r test.bin 1024
+time ssdbenchmark r test.bin 4
+
+Note that bigger blocks for reading doesn't necessarily measure real world performance. In this case 4 MB blocks is a good compromise.
 
 You might want to create 2 files, bigger than the RAM you have, and do the read test two times with each file, else you might get results that are too good to be true.
